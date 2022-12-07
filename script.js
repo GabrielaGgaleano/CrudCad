@@ -74,72 +74,17 @@ class Produto{
         }
     
         lerDados(){
-            let pessoa = {}
+            let produto = {}
     
-            pessoa.id = this.id;
-            pessoa.nomecompleto = document.getElementById('NomeCompleto').value;
-            pessoa.cpf = document.getElementById('CPF').value;
-            pessoa.genero = document.getElementById('Genero').value;
-            pessoa.telefone =  document.getElementById('Telefone').value;
-            pessoa.endereco = document.getElementById('Endereco').value;
-            pessoa.observacoes = document.getElementById('Observacoes').value;
-    
-            return pessoa;
+            produto.NºDoProduto = this.NºDoProduto;
+            produto.NomeDoProduto = document.getElementById('NomeDoProduto').value;
+            produto.Codigo = document.getElementById('Codigo').value;
+            produto.Quantidade = document.getElementById('Quantidade').value;
+            produto.valorunitario=  document.getElementById('valorunitario').value;
+            produto.total = document.getElementById('Total').value;
+           
+            return produto;
         }
        
-        validaCampos(pessoa){
-            let msg = '';
-            if(pessoa.nomecompleto == ''){
-                msg += 'Informe o Nome Completo \n';
-            } 
-            if(pessoa.cpf == ''){
-                msg += 'Informe o CPF \n';
-            } 
-            if(pessoa.genero== ''){
-                msg += 'Informe o gênero \n';
-            } 
-            if(pessoa.telefone== ''){
-                msg += 'Informe o telefone \n';
-            } 
-            if(pessoa.endereco == ''){
-                msg += 'Informe o endereço \n';
-            } 
-            if(pessoa.observacoes == ''){
-                msg += 'Informe observações\n';
-            } 
-            if(msg !=''){
-                alert(msg);
-                return false 
-            }
-            return true;
-    
-        }
-    
-        cancelar(){
-            document.getElementById('NomeCompleto').value = '';
-            document.getElementById('CPF').value = '';
-            document.getElementById('Genero').value = '';
-            document.getElementById('Telefone').value = '';
-            document.getElementById('Endereco').value = '';
-            document.getElementById('Observacoes').value = '';
-    
-            document.getElementById('btnAdd').innerText = 'Adicionar';
-            this.editId = null;
-        }
-    
-        deletar(id) {
-    
-            let tbody = document.getElementById('tbody');
-    
-            for(let i = 0; i < this.arrayPessoa.length; i++) {
-                if(this.arrayPessoa[i].id == id) {
-                    this.arrayPessoa.splice(i , 1);
-                    tbody.deleteRow(i);
-                }
-            }
-        }
-    
     }
-    var pessoa = new Pessoa();
-        
-
+    
