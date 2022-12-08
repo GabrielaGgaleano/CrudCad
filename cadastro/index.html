@@ -4,48 +4,98 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet-shop</title>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Pet-shop </title>
+    <title>Cadastro Pessoa </title>
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Oswald:wght@200&display=swap" rel="stylesheet">
 
+    <script src="js/scriptcadastro.js"></script>
+    <script src="js/telaini.js"></script>
+
 </head>
-<h1>Cadastro produtos</h1>
 <body>
-<!--campo para criação dos campos para prenchimento -->
-    <div class="card">
-        <div class="lineinput">
-            <label>Produto</label>
-            <input type="text" id="Produto"placeholder="Descrição do produto">
+    <header>
+        <h1>Cadastro Pet-shop</h1>
+    </header>
+    <main>
+        <form>
+                 <div class="flex-box container-box">
+                 <div class="lineinput">
+                <label>Nº Do Produto</label>
+                <input type="text" id="NumDoProduto" placeholder= "Nº Do produto">
+                     </div>
+    
+                <div class="flex-box container-box">
+                <div class="lineinput">
+                    <label>Nome Do Produto </label>
+                    <input type="text" id="NomeDoProduto" placeholder="Descrição do Produto">
+                </div>
+
+                <div class="flex-box container-box">
+                <div class="lineinput">
+                    <label>Codigo</label>
+                    <input type="text" id="Codigo"  size="5" maxlength="5" placeholder="Codigo">
+                </div>
+                    </div>
+    
+                <div class="flex-box container-box">
+                <div class="lineinput">
+                    <label> Quantidade </label>
+                    <input type="text" id="Quantidade" placeholder="Quantidade">
+                     <div>
+    
+                <div class="flex-box container-box">
+                 <div class="lineinput">
+                        <label> Token </label>
+                        <input type="text" id="Token" placeholder="Token">
+                    <div>
+    
+                <div class="flex-box container-box">
+                 <div class="lineinput">
+                            <label> Valor Unitário </label>
+                            <input type="text" id="ValorUnitario" placeholder="Valor Unitario">
+                    <div>
+    
+                <div class="flex-box container-box">
+                <div class="lineinput">
+                                <label> Total </label>
+                                <input type="text" id="Total" placeholder="Total">
+                    <div>
+
+        <div class="flex-box container-box">
+
+             <button type="button" onclick ="product.salvar()" id="btnAdd">Adicionar</button>
+            <button type="button" onclick  ="product.cancelar()" id="btnCa">Cancelar</button>
+            <button type="button" onclick  ="product.preparaEditar()" id="btnCa">Buscar</button>
         </div>
 
-        <div class="card">
-            <div class="lineinput">
-                <label>Descrição produto</label>
-                <input type="text" id="Produto"placeholder="Descrição do Produto">
+    </main>
+    <div class="content">
+        <table border="1">
+            <thead>
+                <th class="center">Nº Do Produto</th>
+                <th class="center">Nome Do Produto</th>
+                <th class="center">Codigo</th>
+                <th class="center">Quantidade</th>
+                <th class="center">Token</th>
+                <th class="center">Valor Unitario</th>
+                <th class="center">Total</th>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div>
+</main>
 
-        <div class="card">
-            <div class="lineinput">
-                <label>Preço</label>
-                <input type="number" min="0" max="100" step="01.01" id="Produto" placeholder="Preço">
-            </div>
-        </div>
-
-   <!-- O segundo valor estará selecionado inicialmente -->
-        <label>Indicado para: </label>
-            <select name="select">
-                <option value="valor1">Cachorro</option>
-                <option value="valor2" selected>Peixe</option>
-                <option value="valor3">Gato</option>
-                <option value="valor4">Hamster</option>
-            
-            </select>
+<h2 id="Titulo">
+   
+</h2>
+   
+</form>
+<h2 id="Titulo">
+   
+</h2>
 </body>
 </html>
