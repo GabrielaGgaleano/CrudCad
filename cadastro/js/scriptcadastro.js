@@ -157,8 +157,6 @@ class Produto{
         }
     }
 }
-    
-
 var product = new Produto();
 
 console.log(product)
