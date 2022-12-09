@@ -87,4 +87,5 @@ class Produto{
         }
        
     }
+    console.log("pipipopo")
     
